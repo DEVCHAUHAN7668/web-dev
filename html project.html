@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Showroom</title>
+  <style>
+    /* Reset default margin/padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      color: #333;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    .container {
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 32px;
+      color: #444;
+    }
+
+    .car-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .car-card {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .car-card:hover {
+      transform: scale(1.02);
+    }
+
+    .car-card img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .car-card h3 {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+
+    .car-card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .contact-form button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .contact-form button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SpeedZone Car Showroom</h1>
+    <p>Find your dream car today!</p>
+  </header>
+
+  <nav>
+    <a href="#cars">Cars</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h2 class="section-title" id="cars">Featured Cars</h2>
+    <div class="car-grid">
+      <div class="car-card">
+        <img src="https://via.placeholder.com/300x180?text=Mahindra+Thar" alt="Mahindra Thar">
+        <h3>Mahindra Thar</h3>
+        <p>Powerful off-roader with rugged design and modern interiors.</p>
+      </div>
+
+      <div class="car-card">
+        <img src="https://via.placeholder.com/300x180?text=Hyundai+Creta" alt="Hyundai Creta">
+        <h3>Hyundai Creta</h3>
+        <p>Premium SUV with advanced features and smooth performance.</p>
+      </div>
+
+      <div class="car-card">
+        <img src="https://via.placeholder.com/300x180?text=Toyota+Fortuner" alt="Toyota Fortuner">
+        <h3>Toyota Fortuner</h3>
+        <p>High-end SUV for those who love power, space, and luxury.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title" id="contact">Contact Us</h2>
+    <form class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your Name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Your Email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 SpeedZone Car Showroom. All rights reserved.</p>
+</footer>
+<script>
+  // Form submission handler
+  document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent form from submitting
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (name === '' || email === '' || message === '') {
+      alert('Please fill out all fields.');
+      return;
+    }
+
+    alert(`Thank you, ${name}! We received your message.`);
+    this.reset();
+  });
+
+  // Click on car card to show car info
+  const cars = document.querySelectorAll('.car-card');
+  cars.forEach(card => {
+    card.addEventListener('click', () => {
+      const carName = card.querySelector('h3').innerText;
+      alert(`You clicked on ${carName}`);
+    });
+  });
+
+  // Update year in footer dynamically
+  document.querySelector('footer p').innerHTML = `&copy; ${new Date().getFullYear()} SpeedZone Car Showroom. All rights reserved.`;
+
+</script>
+</body>
+</html>

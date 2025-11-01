@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events and listerning to events</title>
+
+</head>
+<style>
+    body {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: larger;
+        background-color: bisque;
+
+    }
+
+    .container {
+        border: 2px solid black;
+        background-color: aquamarine;
+        margin-bottom: 15px;
+        padding: 5px;
+        border-radius: 2px;
+
+    }
+
+    #btn {
+        padding: 5px 19px 5px;
+        background-color: red;
+        border: 2px solid black;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <!-- browser events: -->
+    <!-- click -->
+    <!-- contextmenu -->
+    <h1>This is a heading</h1>
+    <div id="para" class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, nesciunt nihil. Magnam, 
+            Distinctio a saepe nihil ut ipsam doloribus, eius hic deleniti veritatis, at voluptatem facere quisquam enim
+            libero? Adipisci dolores modi, aliquid deserunt ratione nihil nesciunt debitis neque officia odit dicta
+            corporis, amet labore! Quaerat necessitatibus saepe animi quae! Illo officia repellendus neque illum veniam
+            odio ratione delectus ad fuga quas sit dolore excepturi provident eveniet quos rerum qui omnis ipsum,
+            praesentium consequatur! Non sit corrupti iste molestiae velit numquam perferendis sequi, dolore molestias
+            neque aspernatur ipsa reprehenderit magni earum mollitia eum, ullam praesentium odit rerum, nemo dicta?
+            Repudiandae debitis non dignissimos unde tenetur! Consectetur id rerum autem, dolor recusandae sequi?
+            Perferendis est sit sed! Dolorum accusamus consectetur praesentium ipsam natus temporibus tenetur a impedit
+            dicta error similique architecto corporis excepturi vel pariatur, assumenda recusandae eveniet inventore
+            quam deserunt, dignissimos necessitatibus. Atque nam hic, itaque velit quia molestiae cumque minima adipisci
+            ipsam voluptas labore exercitationem rerum quam earum, nobis, voluptatibus error praesentium fugit nihil?
+            Consequatur, culpa provident. Amet necessitatibus maiores, a quod, temporibus, voluptatem magni fuga 
+            blanditiis earum optio illo accusamus suscipit minus obcaecati exercitationem voluptas magnam. Expedita
+            cumque illum facilis enim aspernatur assumenda, aut voluptatum nemo impedit provident. Fuga quod debitis
+            rerum beatae et incidunt sit repudiandae? Ducimus sit vero quaerat aliquam qui voluptatum asperiores
+            corrupti? Eaque harum eum fugiat accusantium aliquam ipsam aspernatur iusto modi!</p>
+        </div>
+        <button id="btn" onclick="toggleHide()">show/hide</button>
+        <button onclick="alert('button clicked !')"></button>
+        <script>
+
+        let para = document.getElementById('para');
+        para.addEventListener('mouseover', function run() {
+            alert('mouse Inside')
+
+        });
+        para.addEventListener('mouseout', function run() {
+            alert('mouse outside')
+        });
+
+
+        function toggleHide() {
+            let btn = document.getElementById('btn');
+            let para = document.getElementById('para');
+            if (para.style.display != 'none') {
+
+                para.style.display = 'none';
+            }
+            else {
+                para.style.display = 'block';
+
+            }
+            
+            
+        }
+    </script>
+
+
+
+</body>
+<!-- <input type ="text"
+onkeydown="console.log('key pressed')"; -->
+
+</html>

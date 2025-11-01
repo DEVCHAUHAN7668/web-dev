@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java scriptTimeout and cleartimeout</title>
+</head>
+
+<body>
+    <div class="conatiner">
+        Time now is <span id="time"></span>
+    </div>
+    <script>
+        // // console.log("hello ");
+
+        // // function greet(name, byetext) {
+        // //     console.log("hello good night" + name + byetext);
+
+        // }
+        // setTimeout(greet, 8000, "dev", "takecare");
+        // timeOut= setTimeout(greet, 8000, "dev", "takecare");
+        // console.log(timeOut);
+        // setTimeout(greet, 8000, "dev", "takecare");
+//         intervalId =setInterval(greet,91000,"dev","good night");
+// clearInterval(intervalId);
+function displayTime(){
+    time = new Date();
+    console.log(time);
+    document.getElementById('time').innerHTML = time;
+}
+setInterval(displayTime,1000);
+
+    </script>
+</body>
+
+</html>

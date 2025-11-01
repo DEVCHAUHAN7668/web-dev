@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Styled HTML Form</title>
+  <style>
+    body {
+      background-color: aquamarine;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 40px;
+    }
+
+    h3 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="date"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group-inline {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .form-actions {
+      text-align: center;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 10px 20px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    input[type="reset"] {
+      background-color: #f44336;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>This is HTML Forms Tutorial</h3>
+
+  <form action="backend.php">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" name="myname" id="name">
+    </div>
+
+    <div class="form-group">
+      <label for="role">Role</label>
+      <input type="text" name="myrole" id="role">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" name="myemail" id="email">
+    </div>
+
+    <div class="form-group">
+      <label for="date">Date</label>
+      <input type="date" name="mydate" id="date">
+    </div>
+
+    <div class="form-group">
+      <label for="bonus">Bonus</label>
+      <input type="number" name="mybonus" id="bonus">
+    </div>
+
+    <div class="form-group-inline">
+      <input type="checkbox" name="myeligibility" id="eligibility">
+      <label for="eligibility">Are you eligible?</label>
+    </div>
+
+    <div class="form-group">
+      <label>Gender</label>
+      <div class="form-group-inline">
+        <input type="radio" name="mygender" id="male" value="male">
+        <label for="male">Male</label>
+
+        <input type="radio" name="mygender" id="female" value="female">
+        <label for="female">Female</label>
+
+        <input type="radio" name="mygender" id="other" value="other">
+        <label for="other">Other</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="mytext">Write about yourself</label>
+      <textarea name="mytext" id="mytext" cols="50" rows="6"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="car">Car</label>
+      <select name="mycar" id="car">
+        <option value="thar">Mahindra Thar</option>
+        <option value="creta">Hyundai Creta</option>
+      </select>
+    </div>
+
+    <div class="form-actions">
+      <input type="submit" value="Submit Now">
+      <input type="reset" value="Reset">
+    </div>
+  </form>
+
+</body>
+</html>

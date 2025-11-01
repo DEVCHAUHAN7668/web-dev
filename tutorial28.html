@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex box</title>
+
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        padding: 0px 20px 30px 0;
+        line-height: 1.4;
+        background-color: aquamarine;
+    }
+.container{
+    border-radius: 22px;
+    height: 444px;
+    background-color: bisque;
+    width: 100%;
+    border: 2px solid black;
+    display: flex;
+   flex-direction: column;
+   /* justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;*/
+
+
+}
+.item{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border: 3px solid black;
+    margin: 10px;
+    padding: 3px;
+}
+.head{
+    text-align: center;
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+#item1{
+    align-self:flex-start;
+    
+}
+#item2{
+
+    align-self: center;
+}
+#item3{
+    align-self:flex-end;
+}
+</style>
+<body>
+    <h1 class="head">This is a flex box</h1>
+    <div class="container">
+    <div class="item" id="item1">1</div>
+    <div class="item" id="item2">2</div>
+    <div class="item" id="item3">3</div>
+    <div class="item" id="item4">4</div>
+    </div>
+</body>
+</html>

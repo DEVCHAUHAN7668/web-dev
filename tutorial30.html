@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media quary</title>
+</head>
+<style>
+    .box {
+        background-color: blueviolet;
+        color: rgb(250, 248, 248);
+        font-size: xx-large;
+        text-align: center;-ms-hyphenate-limit-zone: 0cqmin;
+        display: none;
+
+
+    }
+
+    @media(max-width:300px) {
+
+        #box-1 {
+            display: block;
+            background-color: rgb(20, 193, 72);
+        }
+    }
+
+    @media (min-width:300px) and (max-width:500px) {
+
+        #box-2 {
+            display: block;
+            background-color: rgb(20, 173, 193);
+        }
+    }
+
+    @media(min-width:500px) and (max-width:800px) {
+
+        #box-3 {
+            display: block;
+            background-color: rgb(193, 20, 55);
+        }
+    }
+</style>
+
+<body>
+    <div id="box-1" class="box">i am a mobilephone</div>
+    <div id="box-2" class="box">i am a computer</div>
+    <div id="box-3" class="box">i am a pc</div>
+    <div id="box-4" class="box">i am a tablate</div>
+</body>
+
+</html>

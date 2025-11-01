@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for and after peodo selector</title>
+    <style>
+        body {
+            background-color: black;
+            color: azure;
+
+
+        }
+
+        header::before {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: "";
+            z-index: -1;
+            opacity: 0.3;
+            
+        }
+        
+        
+        .h {
+            text-align: center;
+        }
+        
+        section {
+            height: 344px;
+            margin: 3px 23px;
+            border: 2px solid pink;
+            display: flex;
+            background: url(https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c291cmNlfGVufDB8fDB8fHww);
+            flex-direction: column;
+            z-index: -1;
+            opacity: 0.4;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section::after {
+            content: "this is a content";
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+
+
+        p {
+            text-align: center;
+        }
+
+        .navigation {
+            display: flex;
+
+        }
+
+        li {
+            list-style: none;
+            padding: 13px;
+            text-align: center;
+            margin-left: 14px;
+            border: 2px solid red
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class=" h">WELCOME MY CODE</h1>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item1">HOME</li>
+                <li class="item2">ABOUT</li>
+                <li class="item3">SERVICES</li>
+                <li class="item4">CONTACT US</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>this is a lorem here</h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi repudiandae suscipit iste assumenda
+        consectetcf=ur. Dolorem ea esse architecto ab mollitia!
+    </section>
+    <hr>
+
+</body>
+
+</html>

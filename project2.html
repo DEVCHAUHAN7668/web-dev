@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project 2</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: bisque;
+    }
+    .conatiner {
+
+        max-width: 900px;
+        max-height: 1000px;
+        margin: 0 auto;
+
+
+        
+    }
+    input:focus{
+        outline-color: red;
+    }
+    .apply-box{
+        max-width: 700px;
+        padding: 20px;
+        background-color: white;
+        margin: 0 auto;
+        height: 1000px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        box-shadow: 4px 3px 5px rgb(112, 216, 197);
+        border-radius:8px;
+    }
+    .small{
+        font-size: 18px;
+    }
+    .form-content{
+        justify-content: space-between;
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(100px ,1fr));
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+   label {
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 2px;
+        
+    }
+    button{
+        color: rgb(0, 0, 0);
+        background-color: brown;
+        padding: 5px;
+        margin-top: 15px;
+        font-weight: 100;
+        justify-content: end;
+   
+    }
+    input,select,
+textarea{
+    padding: 8px 10px;
+    border: 2px solid black;
+}
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="apply-box">
+            <h1>Job Application 
+                <span class="small">(Web)</span></h1>
+                <form action="
+                
+
+                
+                ">
+            <div class="form">
+                <div class="form-content">
+                    <label for="name">First name</label>
+                    <input   placeholder="Enter first name" name="mytime" id="name"> 
+                    <label for="last name">Last name</label>
+                    <input class="ln" placeholder="Enter last name" type="text" name="mytime" id="last name">
+
+                    
+                </div>
+                <div class="form-content">
+                    <label for="email">Email</label>
+                    <input   placeholder="Enter your email" name="mytime" id="email"> 
+
+            </div>
+            <div class="form-content">
+                <label for="job">Job Role</label>
+                <select name="JOB ROLE" id="job">
+                    <option value="">Select Job Role</option>
+                    <option value="Choose job role">Backend developer</option>
+                    <option value="Choose job role">frontent developer</option>
+                    <option value="Choose job role">Data analylist</option>
+
+                </select>
+            </div>
+            <div class="form-content">
+                <label for="data">Enter Address</label>
+                <textarea name="Enter text" id="data" rows="5" cols="80%" ></textarea>
+
+        </div>
+        <div class="form-content">
+            <label for="city">City</label>
+            <input   placeholder="Enter your city" name="mytime" id="city"> 
+
+    </div>
+    <div class="form-content">
+        <label for="pincode">Pincode</label>
+        <input   type="number" placeholder="Enter your email" name="mytime" id="pincode"> 
+
+</div>
+<div class="form-content">
+    <label for="date">Start Date</label>
+    <input type="date" name="mydate" id="date">
+    
+
+</div>
+<div class="form-content">
+    <label for="file">Upload CV</label>
+    <input type="file" name="mydate" id="file">
+    
+
+</div>
+<div class="button">
+    <button type="submit">Apply Now</button>
+</div>
+
+
+</div>
+        </form>
+
+            
+        
+
+    </div>
+
+
+</body>
+
+</html>

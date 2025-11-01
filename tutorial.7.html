@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tables and lists</title>
+</head>
+<style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+
+    .table-container {
+      perspective: 1000px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background: #ffffff;
+      transform: rotateX(4deg);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 16px;
+      text-align: left;
+    }
+
+    thead {
+      background: linear-gradient(to bottom, #4a90e2, #357ab8);
+      color: white;
+      font-weight: bold;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+
+    tbody tr:hover {
+      background-color: #e0e0e0;
+      transform: scale(1.01);
+      transition: all 0.2s ease-in-out;
+    }
+  </style>
+<body>
+    <ul type="square">
+        <li>this is firsty item of my unorderly list</li><br>
+        <li>this is secondary item of my unorderly list</li><br>
+    </ul>
+    <ol type="A">
+        <li>this is first order list</li><br>
+        <ol type="1">
+            <li>first point</li>
+            <li>second point</li>
+        </ol>
+        <li>this is second order list</li><br>
+        <!--table-->
+        <h3>html table</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>id</th>
+                    <th>role number</th>
+                </tr>
+            </thead>
+            <tbody>
+<tr>
+    <td>dev</td>
+    <td>a2024</td>
+    <td>123</td>
+</tr>
+<tr>
+    <td>kai</td>
+    <td>a2025</td>
+    <td>126</td>
+</tr>
+
+
+
+
+            </tbody>
+        </table>
+    </ol>
+</body>
+</html>

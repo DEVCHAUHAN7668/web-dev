@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* css variables */
+:root{
+    --navbar-height:59px;
+}
+/* navigation bar */
+#navbar{
+
+display:flex;
+align-items: center;
+
+}

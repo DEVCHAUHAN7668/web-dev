@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css grid rows & gaps in grid</title>
+</head>
+<style>
+    .grid{
+        display: grid;
+        grid-template-rows: 7fr 7fr 6fr ;
+        grid-auto-rows: 7fr;
+        grid-template-columns: auto auto auto;
+        grid-gap: 5rem;
+        
+
+
+    }
+    .box{
+background-color: green;
+border: 2px solid black;
+    }
+</style>
+<body>
+    <div class="grid">
+        <div class="box">this is box-1</div>
+        <div class="box">this is box-2</div>
+        <div class="box">this is box-3</div>
+        <div class="box">this is box-4</div>
+        <div class="box">this is box-5</div>
+        <div class="box">this is box-6</div>
+        <div class="box">this is box-7</div>
+        <div class="box">this is box-8</div>
+        <div class="box">this is box-9</div>
+        <div class="box">this is box-10</div>
+    </div>
+</body>
+</html>

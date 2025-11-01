@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3D Styled Job Application</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(145deg, #f9e0c7, #ffe4b5);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .apply-box {
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.15),
+                  -5px -5px 20px rgba(255, 255, 255, 0.8);
+      transition: transform 0.3s ease;
+    }
+
+    .apply-box:hover {
+      transform: scale(1.01);
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      text-align: center;
+      color: #4b2e2e;
+    }
+
+    .small {
+      font-size: 18px;
+      color: #888;
+    }
+
+    .form-content {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    label {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+      font-size: 15px;
+      box-shadow: inset 2px 2px 5px #ddd;
+      transition: 0.1s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #d2691e;
+      outline: none;
+      box-shadow: 0 0 5px rgba(210, 105, 30, 0.5);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      background: linear-gradient(to right, #8b0000, #b22222);
+      color: #fff;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease, transform 0.2s;
+      align-self: flex-end;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #a52a2a, #c14444);
+      transform: scale(1.05);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="apply-box">
+      <h1>Job Application <span class="small">(Web)</span></h1>
+      <form action="#">
+        <div class="form-content form-grid">
+          <div>
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first_name" placeholder="Enter first name" required />
+          </div>
+          <div>
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last_name" placeholder="Enter last name" required />
+          </div>
+        </div>
+
+        <div class="form-content">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="form-content">
+          <label for="job">Job Role</label>
+          <select id="job" name="job_role" required>
+            <option value="">Select Job Role</option>
+            <option value="Backend Developer">Backend Developer</option>
+            <option value="Frontend Developer">Frontend Developer</option>
+            <option value="Data Analyst">Data Analyst</option>
+          </select>
+        </div>
+
+        <div class="form-content">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" placeholder="Enter your address"></textarea>
+        </div>
+
+        <div class="form-content form-grid">
+          <div>
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="Enter city" />
+          </div>
+          <div>
+            <label for="pincode">Pincode</label>
+            <input type="number" id="pincode" name="pincode" placeholder="Enter pincode" />
+          </div>
+        </div>
+
+        <div class="form-content form-grid">
+          <div>
+            <label for="date">Start Date</label>
+            <input type="date" id="date" name="start_date" />
+          </div>
+          <div>
+            <label for="file">Upload CV</label>
+            <input type="file" id="file" name="cv" />
+          </div>
+        </div>
+
+        <div class="form-content">
+          <button type="submit">Apply Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
